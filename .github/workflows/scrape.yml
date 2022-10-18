@@ -21,7 +21,7 @@ jobs:
         TO=$(grep -n '</script> <img' article.html | awk '{print $1}' FS=":")
         TO=$(expr $TO - 1)
         FILENAME=$(date '+%Y-%m-%d %H:%M:%S').txt
-        sed -n "${FROM},${TO}p" welt.html > "${FILENAME}"
+        sed -n "${FROM},${TO}p" article.html > "${FILENAME}"
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
