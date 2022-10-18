@@ -4,7 +4,7 @@ on:
   push:
   workflow_dispatch:
   schedule:
-    - cron:  '6 12 * * *'
+    - cron:  '30 * * * *'
 
 jobs:
   scheduled:
@@ -16,8 +16,12 @@ jobs:
         fetch-depth: 0
     - name: Fetch latest data
       run: |-
-        curl https://covid.cdc.gov/covid-data-tracker/COVIDData/getAjaxData?id=vaccination_data | jq . > states.json
-        curl https://covid.cdc.gov/covid-data-tracker/COVIDData/getAjaxData?id=vaccination_county_condensed_data | jq . > counties.json
+        curl https://www.welt.de/finanzen/verbraucher/article241411145/Black-Friday-Diese-attraktiven-Angebote-gibt-es-bereits-jetzt-bei-Amazon.html > article.html
+        FROM=$(grep -n '"author" : {' article.html | awk '{print $1}' FS=":")
+        TO=$(grep -n '</script> <img' article.html | awk '{print $1}' FS=":")
+        TO=$(expr $TO - 1)
+        FILENAME=$(date '+%Y-%m-%d %H:%M:%S').txt
+        sed -n "${FROM},${TO}p" welt.html > "${FILENAME}"
     - name: Commit and push if it changed
       run: |-
         git config user.name "Automated"
