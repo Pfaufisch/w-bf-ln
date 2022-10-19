@@ -16,7 +16,7 @@ jobs:
         fetch-depth: 0
     - name: Fetch latest data
       run: |-
-        curl https://www.welt.de/finanzen/verbraucher/article241411145/Black-Friday-Diese-attraktiven-Angebote-gibt-es-bereits-jetzt-bei-Amazon.html > article.html
+        curl -L https://www.welt.de/finanzen/verbraucher/article241411145/Black-Friday-Diese-attraktiven-Angebote-gibt-es-bereits-jetzt-bei-Amazon.html > article.html
         FROM=$(grep -n '"author" : {' article.html | awk '{print $1}' FS=":")
         TO=$(grep -n '</script> <img' article.html | awk '{print $1}' FS=":")
         TO=$(expr $TO - 1)
