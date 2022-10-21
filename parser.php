@@ -27,6 +27,7 @@ function getMetadata(array $data): array {
     $data = [
         'modified' => $data['dateModified'] ?? null,
         'headline' => $data['headline'] ?? null,
+        'alternativeHeadline' => $data['alternativeHeadline'] ?? null,
         'url' => $data['mainEntityOfPage']['url'] ?? null,
     ];
 
@@ -68,6 +69,7 @@ function run() {
         [
             'datum',
             'headline',
+            'dachzeile',
             'url',
         ],
         $metadatas,
