@@ -1,0 +1,29 @@
+  "author" : {
+    "@type" : "Person",
+    "name" : "WELT"
+  },
+  "@type" : "NewsArticle",
+  "about" : "Anzeige",
+  "description" : "Am Black Friday buhlen die Händler traditionell um die Gunst der Kunden. Dieses Jahr findet das Shopping-Event am 25. November statt. Welche Angebote könnten sich jetzt schon lohnen und was gilt es zu beachten? Der WELT-Guide zur Schnäppchenjagd.",
+  "dateModified" : "2022-11-08T09:03:41Z",
+  "mainEntityOfPage" : {
+    "@type" : "WebPage",
+    "@id" : "https://google.com/article",
+    "url" : "https://www.welt.de/finanzen/verbraucher/article241411145/Black-Friday-Bald-ist-es-wieder-so-weit-Diese-Angebote-lohnen-sich-bereits.html"
+  },
+  "@context" : "http://schema.org",
+  "datePublished" : "2022-11-08T08:00:00Z",
+  "alternativeHeadline" : "Diese Black Friday Angebote gibt es bereits jetzt",
+  "publisher" : {
+    "@type" : "Organization",
+    "name" : "WELT",
+    "logo" : {
+      "@type" : "ImageObject",
+      "url" : "https://www.welt.de/assets/images/global/welt-logo-trans-788d2173e3.png",
+      "width" : 228,
+      "height" : 60
+    }
+  },
+  "category" : "Finanzen",
+  "headline" : "Black Friday: Bald ist es wieder so weit! Diese Angebote lohnen sich bereits"
+}
